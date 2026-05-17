@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: plainpaste
+Version: 0.1.0
+Summary: A cross-platform CLI tool to paste clipboard content as plain text.
+Home-page: https://github.com/femirins/plainpaste
+Author: Femirins
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyperclip>=1.8.2
+Requires-Dist: colorama>=0.4.4
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PlainPaste
+
+A cross-platform CLI tool to paste clipboard content as plain text. No more manual cleanup after copying from Office apps, websites, or emails!
+
+## Features
+- Paste as plain text via `plainpaste`.
+- Watch clipboard and auto-unformat on copy (`plainpaste --watch`).
+- Works on Linux, macOS, and Windows.
+
+## Installation
+```bash
+pip install plainpaste
+```
+
+## Usage
+```bash
+# Paste as plain text
+plainpaste
+
+# Watch clipboard and auto-unformat
+plainpaste --watch
+```
+
+## Technical Architecture
+- **Language**: Python
+- **Libraries**: `pyperclip`, `argparse`, `colorama`
+- **Clipboard Access**: Cross-platform via `pyperclip`
+- **Auto-Unformat**: Uses `pynput` to monitor clipboard changes
+
+## Limitations
+- Requires Python 3.6+
+- Clipboard monitoring (`--watch`) may require additional permissions on some systems.
+
+## License
+MIT
